@@ -12,7 +12,7 @@ yum install docker-ce docker-ce-cli containerd.io -y
 ## Group add 
 id centos &>/dev/null
 if [ $? -eq 0 ]; then 
-  groupadd docker &>/dev/null
+  groupadd -g 3000 docker &>/dev/null
   usermod -a -G docker centos
 fi
 
